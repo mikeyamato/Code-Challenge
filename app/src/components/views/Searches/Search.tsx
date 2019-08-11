@@ -22,13 +22,25 @@ const styles = StyleSheet.create<ISearchProps>({
 	// 	flex: .18,
 	// 	width: '100%',
 	// },
-	cancelButton: {
-		fontSize: Fonts.normalizedSize.input, 
-		fontFamily: Fonts.family.sfPro, 
-		fontWeight: Fonts.weight.regular,
-		color: '#007AFF',
-		letterSpacing: 0.41,
+	// cancelButton: {
+	// 	fontSize: Fonts.normalizedSize.input, 
+	// 	fontFamily: Fonts.family.sfPro, 
+	// 	fontWeight: Fonts.weight.regular,
+	// 	color: '#007AFF',
+	// 	letterSpacing: 0.41,
+	// },
+	safeAreaView: {
+		flex: 0,
+		backgroundColor: '#F8F8F8',
+		opacity: 82,
 	},
+	searchBarContainer: {
+		backgroundColor: '#F8F8F8',
+		opacity: 82,
+		borderBottomColor: '#e5e4ea',
+		borderBottomWidth: 1,
+	},
+	
 })
 
 class Search extends Component<NavigationInjectedProps> {
@@ -48,18 +60,20 @@ class Search extends Component<NavigationInjectedProps> {
 		const { search } = this.state;
 		return (
 			<View>
-				<SafeAreaView>
+				<SafeAreaView style={styles.safeAreaView}>
 				<SearchBar
 					placeholder='Search'
 					onChangeText={this.updateSearch}
 					value={search}
-					// platform='ios'
+					platform='ios'
+					onCancel={this._toBookmarkScreen}
+					containerStyle={styles.searchBarContainer}
 				/>
-				<TouchableOpacity onPress={this._toBookmarkScreen}>
+				{/* <TouchableOpacity onPress={this._toBookmarkScreen}>
 					<Text style={styles.cancelButton}>
 						Cancel
 					</Text>
-				</TouchableOpacity>	
+				</TouchableOpacity>	 */}
 				</SafeAreaView>
 			</View>
 		)
