@@ -3,8 +3,9 @@
   "rules": {
     "ordered-imports": false,
     "object-literal-sort-keys": false,
-    "interface-name": [true, "never-prefix"],
+    "interface-name": [true, "always-prefix"],
     "no-implicit-dependencies": [true, "dev"],
-    "member-access": [true, "no-public"]
+    "member-access": [true, "no-public"],
+    "variable-name": false
   }
 }
