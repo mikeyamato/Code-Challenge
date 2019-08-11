@@ -1,0 +1,9 @@
+/**
+ * temp
+ */
+export const PRIMARY_PASSENGER = 'PRIMARY_PASSENGER';
+export const ADD_PASSENGER = 'ADD_PASSENGER';
+export const DELETE_PASSENGER = 'DELETE_PASSENGER';
+
+
+export const ADD_LOCATION = 'ADD_LOCATION';

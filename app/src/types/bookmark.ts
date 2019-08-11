@@ -31,3 +31,19 @@ export interface IWeatherDetailsProps {
 	salutationCopy: TextStyle;
 	forecastCopy: TextStyle;
 }
+
+export interface IBookmarkNotPresentProps {
+	container: ViewStyle;
+	topCopy: TextStyle;
+	bottomCopy: TextStyle;
+}
+
+export interface IExploringCityProps {
+	buildingImgContainer: ViewStyle;
+	buildingBkgd: ViewStyle;
+	topBuildingGradient: ViewStyle;
+	bottomBuildingGradient: ViewStyle;
+	copyContainer: ViewStyle;
+	topCopy: TextStyle;
+	bottomCopy: TextStyle;
+}

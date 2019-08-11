@@ -36,7 +36,7 @@ const AppNavigator = createStackNavigator(
 	},
 	// as the name suggests, first screen when starting app
 	{
-		initialRouteName: 'BookmarkScreen',
+		initialRouteName: 'SearchScreen',
 	}
 )
 
