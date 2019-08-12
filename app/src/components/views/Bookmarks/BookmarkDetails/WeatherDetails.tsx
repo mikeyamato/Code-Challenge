@@ -12,6 +12,7 @@ import {
 	NavigationInjectedProps
 } from 'react-navigation';
 
+import { Search } from '../Searches';
 import { Images, Fonts } from '../../../../themes';
 import { IWeatherDetailsProps } from '../../../../types/bookmark';
 
@@ -77,9 +78,10 @@ class WeatherDetails extends Component<NavigationInjectedProps> {
 							Today is 72° and Sunny
 						</Text>
 					</View>
-					<TouchableOpacity onPress={this._toSearchScreen}>
+					{/* <TouchableOpacity onPress={this._toSearchScreen}>
 						<Image style={styles.buttonContainer} source={Images.bkmkBlueButton}/>
-					</TouchableOpacity>	
+					</TouchableOpacity>	 */}
+					<Search />
 				</View>
 			</View>
 		)

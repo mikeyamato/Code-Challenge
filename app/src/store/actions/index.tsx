@@ -1,16 +1,6 @@
-/**
- * temp
- */
-
-import { primaryPassenger, passengers, deletePassenger } from './profile';
-
-import { addLocation } from './bookmarks'
+import { addLocation, locationNotBookmarked } from './bookmarks'
 
 export {
-	primaryPassenger, 
-	passengers, 
-	deletePassenger,
-
-
 	addLocation,
+	locationNotBookmarked,
 }

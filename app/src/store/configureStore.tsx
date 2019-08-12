@@ -1,7 +1,6 @@
 // `compose` allows middleware to be added
 import { createStore, combineReducers, compose } from 'redux';
 import {
-	profileReducer,
 	bookmarksReducer
 } from './reducers';
 
@@ -13,7 +12,6 @@ import {
 // }
 
 const appReducer = combineReducers({
-	profiles: profileReducer,
 	bookmarks: bookmarksReducer,
 })
 

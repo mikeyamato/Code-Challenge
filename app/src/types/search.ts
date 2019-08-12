@@ -16,4 +16,5 @@ export interface ISearchProps {
 	// forecastCopy: TextStyle;
 	safeAreaView: ViewStyle;
 	searchBarContainer: ViewStyle;
+	buttonContainer: ImageStyle;
 }
