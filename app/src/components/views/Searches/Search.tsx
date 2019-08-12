@@ -12,7 +12,9 @@ import {
 	// https://dev.to/andreasbergqvist/react-navigation-with-typescript-29ka
 	NavigationInjectedProps
 } from 'react-navigation';
-import { SearchBar } from 'react-native-elements';
+// import { SearchBar } from 'react-native-elements';
+import RNGooglePlaces from 'react-native-google-places';
+import _ from 'lodash';
 
 import { Images, Fonts } from '../../../themes';
 import { ISearchProps } from '../../../types/search';
@@ -53,7 +55,25 @@ class Search extends Component<NavigationInjectedProps> {
 	}
 
 	updateSearch = search => {
-    this.setState({ search });
+
+		this.setState({ search });
+
+	}
+
+	openSearchModal() {
+		
+		RNGooglePlaces.openAutocompleteModal(
+			{
+				country: 'US',
+				type: 'establishment'
+			}, []
+		)
+    .then((place) => {
+        console.log(place);
+        // place represents user's selection from the
+        // suggestions and it is a simplified Google Place object.
+    })
+    .catch(error => console.log(error.message));  // error is a Javascript Error object
   };
 
 	render() {
@@ -61,19 +81,20 @@ class Search extends Component<NavigationInjectedProps> {
 		return (
 			<View>
 				<SafeAreaView style={styles.safeAreaView}>
-				<SearchBar
+				{/* <SearchBar
 					placeholder='Search'
 					onChangeText={this.updateSearch}
 					value={search}
-					platform='ios'
+					// platform='ios'
 					onCancel={this._toBookmarkScreen}
 					containerStyle={styles.searchBarContainer}
-				/>
-				{/* <TouchableOpacity onPress={this._toBookmarkScreen}>
+					
+				/> */}
+				<TouchableOpacity onPress={this.openSearchModal}>
 					<Text style={styles.cancelButton}>
-						Cancel
+						Open
 					</Text>
-				</TouchableOpacity>	 */}
+				</TouchableOpacity>	
 				</SafeAreaView>
 			</View>
 		)
