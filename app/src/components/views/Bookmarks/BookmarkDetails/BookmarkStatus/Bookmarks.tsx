@@ -3,29 +3,19 @@ import { connect } from 'react-redux';
 import { 
 	View, 
 	Text, 
-	ImageBackground,
-	Image,
-	SafeAreaView,
 	StyleSheet
 } from 'react-native';
-// import LinearGradient from 'react-native-linear-gradient';
 
-import { Images, Colors, Fonts } from '../../../../../themes';
+import { Fonts } from '../../../../../themes';
 import { IBookmarkNotPresentProps } from '../../../../../types/bookmark';
 
 const styles = StyleSheet.create<IBookmarkNotPresentProps>({
-	// container: {
-	// 	flex: 1,
-	// 	alignItems: 'center',
-	// },
 	container: {
 		flex: .36,
 		position: 'relative',
 		width: '100%',
 		alignItems: 'center',
 		justifyContent: 'center',
-		// borderWidth: 1,
-		// borderColor: Colors.facebook,
 	},
 	topCopy: {
 		position: 'absolute',
@@ -35,8 +25,6 @@ const styles = StyleSheet.create<IBookmarkNotPresentProps>({
 		color: '#808080',
 		letterSpacing: 0.55,
 		top: '39%',
-		// borderWidth: 1,
-		// borderColor: Colors.facebook,
 	},
 	bottomCopy: {
 		position: 'absolute',
@@ -46,8 +34,6 @@ const styles = StyleSheet.create<IBookmarkNotPresentProps>({
 		color: '#ACB7B9',
 		letterSpacing: 0.4,
 		bottom: '45%',
-		// borderWidth: 1,
-		// borderColor: Colors.facebook,
 	}
 })
 

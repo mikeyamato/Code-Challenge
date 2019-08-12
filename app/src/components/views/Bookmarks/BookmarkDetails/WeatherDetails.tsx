@@ -4,7 +4,6 @@ import {
 	Text, 
 	Image,
 	StyleSheet,
-	TouchableOpacity,
 } from 'react-native';
 import { 
 	withNavigation,
@@ -31,8 +30,6 @@ const styles = StyleSheet.create<IWeatherDetailsProps>({
 		justifyContent: 'space-between',
 		width: '86%',
 		bottom: '20%',
-		// borderWidth: 1,
-		// borderColor: Colors.facebook,
 	},
 	copyContainer: {
 		justifyContent: 'space-around',
@@ -45,8 +42,6 @@ const styles = StyleSheet.create<IWeatherDetailsProps>({
 		fontWeight: Fonts.weight.light,
 		color: '#0A0A0A',
 		letterSpacing: 0.3,
-		// borderWidth: 1,
-		// borderColor: Colors.facebook,
 	},
 	forecastCopy: {
 		fontSize: Fonts.normalizedSize.xsmall, 
@@ -54,8 +49,6 @@ const styles = StyleSheet.create<IWeatherDetailsProps>({
 		fontWeight: Fonts.weight.medium,
 		color: '#383838',
 		letterSpacing: 0.15,
-		// borderWidth: 1,
-		// borderColor: Colors.facebook,
 	},
 })
 
@@ -78,9 +71,6 @@ class WeatherDetails extends Component<NavigationInjectedProps> {
 							Today is 72° and Sunny
 						</Text>
 					</View>
-					{/* <TouchableOpacity onPress={this._toSearchScreen}>
-						<Image style={styles.buttonContainer} source={Images.bkmkBlueButton}/>
-					</TouchableOpacity>	 */}
 					<Search />
 				</View>
 			</View>

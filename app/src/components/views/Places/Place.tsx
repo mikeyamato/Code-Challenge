@@ -1,13 +1,8 @@
 import React, { Component } from 'react';
 import { 
 	View, 
-	Text, 
-	Image,
 	StyleSheet,
-	TouchableOpacity,
-	SafeAreaView,
 } from 'react-native';
-import { connect } from 'react-redux';
 
 import { LocationImage, LocationMap } from './components'
 

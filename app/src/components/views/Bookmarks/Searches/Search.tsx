@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import { 
 	View, 
-	Text, 
 	Image,
 	StyleSheet,
 	TouchableOpacity,
-	SafeAreaView,
 } from 'react-native';
 import { 
 	withNavigation,
@@ -15,7 +13,7 @@ import {
 import RNGooglePlaces from 'react-native-google-places';
 import { connect } from 'react-redux';
 
-import { Images, Fonts } from '../../../../themes';
+import { Images } from '../../../../themes';
 import { ISearchProps } from '../../../../types/search';
 import { locationNotBookmarked } from '../../../../store/actions';
 
@@ -45,7 +43,6 @@ class Search extends Component<NavigationInjectedProps> {
 					type: 'establishment'
 				}, []
 			)
-			console.log('***** chosenLocation: ', chosenLocation)
 			this.props.onLocationSelection(chosenLocation)
 			this.props.navigation.navigate('PlaceScreen')
 		} catch (error) {

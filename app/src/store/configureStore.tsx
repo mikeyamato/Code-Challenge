@@ -4,13 +4,6 @@ import {
 	bookmarksReducer
 } from './reducers';
 
-// // https://www.mydatahack.com/getting-redux-devtools-to-work-with-typescript/
-// declare global {
-//   interface IWindow {
-//     __REDUX_DEVTOOLS_EXTENSION_COMPOSE__?: typeof compose;
-//   }
-// }
-
 const appReducer = combineReducers({
 	bookmarks: bookmarksReducer,
 })

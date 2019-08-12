@@ -14,8 +14,9 @@ import {
 	// https://dev.to/andreasbergqvist/react-navigation-with-typescript-29ka
 	NavigationInjectedProps
 } from 'react-navigation';
+import LinearGradient from 'react-native-linear-gradient';
 
-import { Colors, Images, Fonts } from '../../../../themes';
+import { Images, Fonts } from '../../../../themes';
 
 const styles = StyleSheet.create({
 	container: {
@@ -24,12 +25,21 @@ const styles = StyleSheet.create({
 		alignItems: 'center',
 		width: '100%',
 		zIndex: -1,
-		// backgroundColor: Colors.charcoal,
-		// borderWidth: 1,
-		// borderColor: 'pink',
 	},
 	heroImage: {
 		width: '100%',
+	},
+	topGradient: {
+		height: '20%',
+		position: 'absolute',
+		top: 0,
+		paddingHorizontal: '100%',
+	},
+	bottomGradient: {
+		height: '52%',
+		position: 'absolute',
+		bottom: -10,
+		paddingHorizontal: '100%',
 	},
 	goBackButtonContainer: {
 		position: 'absolute',
@@ -44,8 +54,6 @@ const styles = StyleSheet.create({
 		position: 'absolute',
 		bottom: '6.2%',
 		width: '86%',
-		// borderWidth: 1,
-		// borderColor: 'pink',
 	}, 
 	cityPlusState: {
 		position: 'relative',
@@ -79,8 +87,6 @@ const styles = StyleSheet.create({
 		justifyContent: 'space-evenly',
 		alignItems: 'center',
 		borderRadius: 11.25,
-		// borderWidth: 1,
-		// borderColor: 'pink',
 	},
 	ratingsHeart: {
 
@@ -105,13 +111,13 @@ class LocationImage extends Component<NavigationInjectedProps> {
 		const city = _.nth(addressComponents,3)
 		const state = _.nth(addressComponents,5)
 		const updatedRating = rating.toFixed(1);
-		console.log('###### city:', city)
-		console.log('###### city.name:', city.name)
-
 
 		return (
 			<View style={styles.container}>
+					
 				<Image style={styles.heroImage} source={Images.tempHeroImage} />
+				<LinearGradient colors={['rgba(0, 0, 0, 0.5)', 'rgba(0, 0, 0, 0.0)']} style={styles.topGradient} />
+				<LinearGradient colors={['rgba(0, 0, 0, 0.0)', 'rgba(0, 0, 0, 0.75)']} style={styles.bottomGradient} />
 				<View style={styles.goBackButtonContainer}>
 					<TouchableOpacity onPress={this._toSearchScreen}>
 						<Image style={styles.goBackIcon} source={Images.goIcon} />
