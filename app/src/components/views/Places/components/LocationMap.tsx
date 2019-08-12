@@ -9,24 +9,31 @@ import {
 } from 'react-native';
 import { connect } from 'react-redux';
 
-import { LocationImage, LocationMap } from './components'
-
 const styles = StyleSheet.create({
 	container: {
-		flex: 1,
+		flex: 0.38,
+		position: 'relative',
 		alignItems: 'center',
+		width: '100%',
+		zIndex: 1,
+		backgroundColor: '#FFFFFF',
+		borderTopLeftRadius: 11.25,
+		borderTopRightRadius: 11.25,
+		borderWidth: 1,
+		borderColor: 'green',
 	},
 })
 
-class Place extends Component {
+class LocationMap extends Component {
 	render() {
 		return (
 			<View style={styles.container}>
-				<LocationImage/>
-				<LocationMap/>
+				<Text>
+					Bye
+				</Text>
 			</View>
 		)
 	}
 }
 
-export default Place;
+export default LocationMap;

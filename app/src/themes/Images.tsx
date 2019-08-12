@@ -5,6 +5,9 @@ const images = {
 	bkmkBlueButton: require('../assets/img/addBookmarkButton.png'),
 
 	// place screen
+	heartIcon: require('../assets/img/heartIcon.png'),
+	tempHeroImage: require('../assets/img/placeHeroImage.png'),
+	goIcon: require('../assets/img/goIcon.png'),
 }
 
 export default images;
