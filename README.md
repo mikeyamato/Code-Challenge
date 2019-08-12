@@ -10,13 +10,13 @@ TAPP Code Challenge for Software Engineer Candidates
 
 ## Candidate Information (Fill out with your info)
 
-Name: _Your Name_
+Name: Mike Yamato
 
-Email: _Your email_
+Email: mikeyamato@gmail.com
 
-Resume: _link to your resume_
+Resume: https://drive.google.com/open?id=1eU4Zo_XRrCKhtXSoXNcynZGGqNFq-dJ4
 
-Additional: _Such as Github or LinkedIn, etc_
+Additional: https://www.linkedin.com/in/mikeyamato/
 
 ## Intro
 
